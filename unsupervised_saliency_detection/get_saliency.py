@@ -163,7 +163,7 @@ for img_name in tqdm(img_list) :
         out_name = os.path.join(args.out_dir, img_name)
         out_lost = os.path.join(args.out_dir, img_name.replace('.jpg', '_tokencut.jpg'))
         out_bfs = os.path.join(args.out_dir, img_name.replace('.jpg', '_tokencut_bfs.jpg'))
-        #out_eigvec = os.path.join(args.out_dir, img_name.replace('.jpg', '_tokencut_eigvec.jpg'))
+        out_eigvec = os.path.join(args.out_dir, img_name.replace('.jpg', '_tokencut_eigvec.jpg'))
 
         copyfile(img_pth, out_name)
         org = np.array(Image.open(img_pth).convert('RGB'))
